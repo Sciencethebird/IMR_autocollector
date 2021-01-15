@@ -1,14 +1,5 @@
----
-title: 'IMR Auto Data Collector'
-disqus: hackmd
----
-
 IMR Auto Data Collector
 ===
-
-## Table of Contents
-
-[TOC]
 
 ## About this project
 
