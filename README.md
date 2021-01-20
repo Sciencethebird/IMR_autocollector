@@ -3,7 +3,7 @@ IMR Auto Data Collector
 
 ## About this project
 
-this project allows you to collect RGB, depth, mask of objects automatically using GAZEBO
+this project allows you to collect RGB, depth, mask of objects automatically using ROS & GAZEBO
 
 ## Tutorial
 this tutorial will walk you through the following topics:
