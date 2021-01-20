@@ -280,6 +280,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
 
     - after setting up your gazebo world, you can save it using the gazebo GUI
     - if you want to save your .world file in other locataion, do
+    
     `export GAZEBO_RESOURCE_PATH='location/you/want'`
     - to launch your world using roslaunch
         - the easist way is to include empty_world.launch (GAZEBO example world)
