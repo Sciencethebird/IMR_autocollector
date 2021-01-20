@@ -13,6 +13,10 @@ This document will walk you through the following topics:
     1. how to change model position, lighting, collision, dimension ...etc
     2. how to change camera intrinsics
     3. how to save your world and roslanch it
+- Problem log
+- More
+    1. How to process data into Linemod dataset format
+    2. onenote link
 
 
 
@@ -325,7 +329,11 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
     -    re-install gazebo_ros_pkg
     -    follow [official website tutorial](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros)
     -    follow B. Install from Source (on Ubuntu)		
-		
+
+## More
+1. How to process data into Linemod dataset format
+-    see this [repo](http://github.com/Sciencethebird/IMR_linemod_generator) 
+2. OneNote link
 		
 		
 ###### tags: `GAZEBO` `ROS` `IMR` `Documentation`
