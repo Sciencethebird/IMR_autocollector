@@ -49,6 +49,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
          you can change them in the code
          
 #### B. Collecting rgb&depth images
+![](https://github.com/Sciencethebird/IMR_autocollector/blob/main/images/collect_rgb_and_depth.png?raw=true)
 1. start IMR world with normal lighting
 ```sh
 roslaunch gazebo_ros IMR_DF_NORMAL.world
@@ -59,6 +60,8 @@ roslaunch gazebo_ros IMR_DF_NORMAL.world
 ``` 
     
 #### C. Collecting mask images
+![](https://github.com/Sciencethebird/IMR_autocollector/blob/main/images/collect_mask.png?raw=true)
+
 1. start IMR world with no lighting
 ```sh
 roslaunch gazebo_ros IMR_DF_MASK.world
