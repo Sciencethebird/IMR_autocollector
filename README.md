@@ -40,41 +40,42 @@ cd launch
 ## How to run this project
 since the world for collecting rgb&depth and mask are differnet, you need to collect them seperatly
 
-- #### Generate random camera poses
-    ```sh
-    . generate_camera_pose.sh 1000
-    ``` 
-    -    this script generate 1000 random camera poses and store them in camera_poses.yml
-    -    p.s. camera always points at (x, y, z) = (0.0, 0.0, 0.28)
+#### A. Generate random camera poses
+```sh
+. generate_camera_pose.sh 1000
+``` 
+-    this script generate 1000 random camera poses and store them in camera_poses.yml
+-    p.s. camera always points at (x, y, z) = (0.0, 0.0, 0.28)
          you can change them in the code
-- #### Collecting rgb&depth images
-    1. start IMR world with normal lighting
-    ```sh
-    roslaunch gazebo_ros IMR_DF_NORMAL.world
-    ``` 
-    2. run data collector script
-    ```sh
-    . collect_rgb_and_depth.sh
-    ``` 
+         
+#### B. Collecting rgb&depth images
+1. start IMR world with normal lighting
+```sh
+roslaunch gazebo_ros IMR_DF_NORMAL.world
+``` 
+2. run data collector script
+```sh
+. collect_rgb_and_depth.sh
+``` 
     
-- #### Collecting mask images
-    1. start IMR world with no lighting
-    ```sh
-    roslaunch gazebo_ros IMR_DF_MASK.world
-    ``` 
-    2. run data collector script
-    ```sh
-    . collect_mask.sh
-    ``` 
-- #### Output
-    -    you can find collected data in data/0001
-    - 0001
+#### C. Collecting mask images
+1. start IMR world with no lighting
+```sh
+roslaunch gazebo_ros IMR_DF_MASK.world
+``` 
+2. run data collector script
+```sh
+. collect_mask.sh
+``` 
+#### D. Output
+- you can find collected data in data/0001
+- 0001
     |__depth: depth images
     |__info:  camera_poses.yml, *object_pose.yml, *object_color.yml
     |__mask: mask images
     |__rgb: rgb images
-    
-    ** you have to modify these files manually if you change the object poses/color of the world
+** you have to modify these files manually if you change the object poses/color of the world
+
 ## Code Explained
 
 * ### Purpose of each python script
