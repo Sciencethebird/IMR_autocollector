@@ -70,11 +70,11 @@ roslaunch gazebo_ros IMR_DF_MASK.world
 #### D. Output
 - you can find collected data in data/0001
 - 0001
-    - depth: depth images
-    - info:  camera_poses.yml, *object_pose.yml, *object_color.yml
-    - mask: mask images
-    - rgb: rgb images
-** you have to modify these files manually if you change the object poses/color of the world
+    - depth:   depth images
+    - info:    camera_poses.yml, *object_pose.yml, *object_color.yml
+    - mask:    mask images
+    - rgb:     rgb images
+- * you have to modify these files manually if you change the object poses/color of the world
 
 ## Code Explained
 
