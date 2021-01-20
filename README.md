@@ -5,8 +5,7 @@ IMR Auto Data Collector
 
 This project allows you to collect RGB, depth, mask of objects automatically using GAZEBO and ROS
 
-## Tutorial
-this tutorial will walk you through the following topics:
+This document will walk you through the following topics:
 - Project Setup
 - How to run this project
 - Code Explained
@@ -19,12 +18,14 @@ this tutorial will walk you through the following topics:
 
 ## Project Setup
 
-1. setup gazebo world file
+#### 1. setup gazebo world file
 ```script
 export GAZEBO_RESOURCE_PATH=path/to/worlds.
 ``` 
 
-2. setup gazebo launch file
+* so gazebo can use the .world files in this package
+
+#### 2. setup gazebo launch file
 -    you can use roscd to find the launch file directory
 ```script
 roscd gazebo_ros
@@ -35,14 +36,14 @@ cd launch
 ## How to run this project
 since the world for collecting rgb&depth and mask are differnet, you need to collect them seperatly
 
-- Generate random camera poses
+- #### Generate random camera poses
     ```sh
     . generate_camera_pose.sh 1000
     ``` 
     -    this script generate 1000 random camera poses and store them in camera_poses.yml
     -    p.s. camera always points at (x, y, z) = (0.0, 0.0, 0.28)
          you can change them in the code
-- Collecting rgb&depth images
+- #### Collecting rgb&depth images
     1. start IMR world with normal lighting
     ```sh
     roslaunch gazebo_ros IMR_DF_NORMAL.world
@@ -52,7 +53,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
     . collect_rgb_and_depth.sh
     ``` 
     
-- Collecting mask images
+- #### Collecting mask images
     1. start IMR world with no lighting
     ```sh
     roslaunch gazebo_ros IMR_DF_MASK.world
@@ -61,10 +62,18 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
     ```sh
     . collect_mask.sh
     ``` 
+- #### Output
+    -    you can find collected data in data/0001
+    - 0001
+    |__depth: depth images
+    |__info:  camera_poses.yml, *object_pose.yml, *object_color.yml
+    |__mask: mask images
+    |__rgb: rgb images
     
+    ** you have to modify these files manually if you change the object poses/color of the world
 ## Code Explained
 
-* ### Purpose of each python file
+* ### Purpose of each python script
 
     1. camera_pose_generator.py
         - This python script generates number of 6D poses and store them into txt
@@ -72,7 +81,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
         `python camera_pose_generator.py 1000`
         - How this file generates camera pose?
             - this python script generates random camera z (height), r (distance to the target point), roll, and theta. 
-            - ![](https://i.imgur.com/uQnPV0V.jpg)
+            ![](https://i.imgur.com/uQnPV0V.jpg)
             - the yaw and pitch of the camera are derived from pointing camera at a target point
 
 
@@ -280,8 +289,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
 
     - after setting up your gazebo world, you can save it using the gazebo GUI
     - if you want to save your .world file in other locataion, do
-    
-    `export GAZEBO_RESOURCE_PATH='location/you/want'`
+        `export GAZEBO_RESOURCE_PATH='location/you/want'`
     - to launch your world using roslaunch
         - the easist way is to include empty_world.launch (GAZEBO example world)
         - you can use roscd to find launch files
