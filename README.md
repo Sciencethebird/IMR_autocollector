@@ -45,7 +45,7 @@ since the world for collecting rgb&depth and mask are differnet, you need to col
 . generate_camera_pose.sh 1000
 ``` 
 -    this script generate 1000 random camera poses and store them in camera_poses.yml
--    p.s. camera always points at (x, y, z) = (0.0, 0.0, 0.28)
+-    p.s. in this code, camera always points at (x, y, z) = (0.0, 0.0, 0.28), 
          you can change them in the code
          
 #### B. Collecting rgb&depth images
