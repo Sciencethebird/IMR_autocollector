@@ -71,8 +71,8 @@ roslaunch gazebo_ros IMR_DF_MASK.world
 . collect_mask.sh
 ``` 
 #### D. Output
-- you can find collected data in data/0001
-- 0001 folder
+- you can find output data in data/0001
+- folder 0001 
     - depth:   depth images
     - info:    camera_poses.yml, object_pose.yml, object_color.yml
     - mask:    mask images
